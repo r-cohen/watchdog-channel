@@ -1,4 +1,4 @@
-package whatchdog
+package watchdog
 
 import "time"
 
