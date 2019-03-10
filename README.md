@@ -1,5 +1,5 @@
 # watchdog-channel
-A simple watchdog based on golang channels
+A simple watchdog timer based on golang channels
 
 ## Installation
 `go get github.com/phearme/watchdog-channel`
