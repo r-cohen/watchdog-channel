@@ -7,20 +7,22 @@ A simple watchdog timer based on golang channels
 ## Usage
 ```go
 // kicks at interval on the GetKickChannel()
-w := watchdog.NewWatchdog(time.Second * 3)
+wd := watchdog.NewWatchdog(time.Second * 3)
 i := 0
-for {
-  select {
-  case <-w.GetKickChannel():
-    fmt.Println("kick!")
-		i++
-		if i == 3 {
-			// stop the watchdog permanently
-			w.Stop()
-			return
+go func(w *watchdog.Watchdog) {
+	for {
+		select {
+		case <-w.GetKickChannel():
+			fmt.Println("kick!")
+			i++
+			if i == 3 {
+				// stop the watchdog permanently
+				w.Stop()
+				return
+			}
 		}
-  }
-}
+	}
+}(wd)
 ```
 Reset the watchdog timer:
 ```go
