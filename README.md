@@ -8,8 +8,8 @@ A simple watchdog timer based on golang channels
 ```go
 // kicks at interval on the GetKickChannel()
 wd := watchdog.NewWatchdog(time.Second * 3)
-i := 0
 go func(w *watchdog.Watchdog) {
+	i := 0
 	for {
 		select {
 		case <-w.GetKickChannel():
