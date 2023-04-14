@@ -2,7 +2,7 @@
 A simple watchdog timer based on golang channels
 
 ## Installation
-`go get github.com/phearme/watchdog-channel`
+`go get github.com/r-cohen/watchdog-channel`
 
 ## Usage
 ```go
