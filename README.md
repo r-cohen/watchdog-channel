@@ -31,3 +31,5 @@ w.Reset()
 
 ## Online example
 [Go Playground](https://play.golang.org/p/wLtW6V4k8k7)
+
+[<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="60" />](https://www.buymeacoffee.com/raphael.cohen)
